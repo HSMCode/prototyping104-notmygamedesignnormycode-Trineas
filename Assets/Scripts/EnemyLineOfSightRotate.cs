@@ -12,8 +12,8 @@ public class EnemyLineOfSightRotate : MonoBehaviour
    public LineRenderer lineofsight;
    public Gradient hitColor;
    public Gradient nonhitColor;
-   
-   
+
+    public bool clockwise;
 
     void Start()
     {
@@ -23,7 +23,15 @@ public class EnemyLineOfSightRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-          transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
+        if (clockwise)
+        {
+            transform.Rotate(-Vector3.forward * rotationSpeed * Time.deltaTime);
+        }
+        else
+        {
+            transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
+        }
+
         
          RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, distance);
         
