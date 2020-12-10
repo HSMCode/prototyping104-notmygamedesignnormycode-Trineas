@@ -9,19 +9,33 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveDirection;
     public int countToWin;
     public int foodCount;
-    
-    
 
+    public ParticleSystem footstepsEffect;
+    public ParticleSystem.EmissionModule footEmission;
+
+
+    private void Start()
+    {
+        footEmission = footstepsEffect.emission;
+    }
 
 
     // Update is called once per frame
     void Update()
     {
         ProcessInput();
-        
+
+        if (moveDirection.x != 0 || moveDirection.y != 0)
+        {
+            footEmission.rateOverTime = 35f;
+        }
+        else
+        {
+            footEmission.rateOverTime = 0f;
+        }
     }
 
-    private void FixedUpdate()
+        private void FixedUpdate()
     {
         Move();
         
