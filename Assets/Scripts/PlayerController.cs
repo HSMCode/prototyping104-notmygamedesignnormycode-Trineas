@@ -47,12 +47,15 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             foodCount += 1;
             
-            if(foodCount == countToWin){
+            if(foodCount == countToWin && !gameManager.lastLevel)
+            {
                 Debug.Log("I GOT ALL OF THE FOOD!");
-                gameManager.Win();
-                
-        
-                }
+                gameManager.Win();       
+            }
+            else if(foodCount == countToWin && gameManager.lastLevel)
+            {
+                gameManager.WinGame();
+            }
 
             }
 

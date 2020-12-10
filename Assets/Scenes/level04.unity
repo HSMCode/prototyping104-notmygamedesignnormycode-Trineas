@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -311,6 +311,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 915584333, guid: 91bd965b40e4a354ab0963243da51c8b, type: 3}
+      propertyPath: lastLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915584333, guid: 91bd965b40e4a354ab0963243da51c8b, type: 3}
+      propertyPath: winScreen
+      value: 
+      objectReference: {fileID: 1370898480}
     - target: {fileID: 5913957524733532845, guid: 91bd965b40e4a354ab0963243da51c8b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -765,6 +773,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 923e589381bfd3545a882cd020370b11, type: 3}
+--- !u!1 &1370898480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2750977478553329878, guid: 33705c557512aa14b818139db54b1476,
+    type: 3}
+  m_PrefabInstance: {fileID: 1956697462}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1462550488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -915,6 +929,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7807616933611437486, guid: 33705c557512aa14b818139db54b1476,
+        type: 3}
+      propertyPath: m_text
+      value: Restart
+      objectReference: {fileID: 0}
     - target: {fileID: 7807616934778902891, guid: 33705c557512aa14b818139db54b1476,
         type: 3}
       propertyPath: m_LocalPosition.x

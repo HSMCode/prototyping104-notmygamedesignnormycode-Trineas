@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private bool gameHasEnded;
+    public bool lastLevel;
+
+    public GameObject winScreen;
+
+
    public void EndGame (){
 
        if(gameHasEnded == false){
@@ -19,6 +24,12 @@ public class GameManager : MonoBehaviour
     }
     public void Win(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void WinGame()
+    {
+        winScreen.SetActive(true);
+        Time.timeScale = 0f;
     }
 
 
