@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -810,6 +810,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3766fdc535652bc4b8d4c391ab22b300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastLevel: 0
+  winScreen: {fileID: 0}
 --- !u!4 &2096201196
 Transform:
   m_ObjectHideFlags: 0
@@ -1245,5 +1247,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 2096201195}
+    - target: {fileID: 8282825073210914633, guid: 9daf2552503616449b0a06813689aa12,
+        type: 3}
+      propertyPath: distance
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9daf2552503616449b0a06813689aa12, type: 3}

@@ -848,6 +848,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3766fdc535652bc4b8d4c391ab22b300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastLevel: 0
+  winScreen: {fileID: 0}
 --- !u!1001 &695545291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1417,6 +1419,11 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 693158069}
+    - target: {fileID: 8282825073210914633, guid: 9daf2552503616449b0a06813689aa12,
+        type: 3}
+      propertyPath: distance
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9daf2552503616449b0a06813689aa12, type: 3}
 --- !u!1001 &1572604836
