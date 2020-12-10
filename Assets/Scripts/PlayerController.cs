@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public int countToWin;
     public int foodCount;
 
-    public ParticleSystem footstepsEffect;
+    public ParticleSystem footstepsEffect, impactEffect;
     public ParticleSystem.EmissionModule footEmission;
 
 
@@ -58,6 +58,12 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D (Collider2D collision){
         if(collision.CompareTag("Food")){
             print("I FOUND SOME FOOD!");
+
+            impactEffect.gameObject.SetActive(true);
+            impactEffect.Stop();
+            impactEffect.transform.position = collision.transform.position;
+            impactEffect.Play();
+
             Destroy(collision.gameObject);
             foodCount += 1;
             
